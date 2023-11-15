@@ -1,0 +1,11 @@
+[
+   {
+      "model": "auth.user",
+      "pk": 2,
+      "fields": {
+        "username": "jehan",
+        "email": "jehan@example.com",
+        "password": "pbkdf2_sha256$600000$d0Y66hHI5zbFEwAsOiDOQK$O1wB+tKQEZN0TUsoa8qIUaFnUG3p45QdR2i1ze1zYJk="
+      }
+    }
+  ]
