@@ -11,7 +11,6 @@ function App() {
   };
   useEffect(() => {
     async function SendSecretSanta() {
-      console.log(pairings);
       const data = { 
         pairings: [],
         pub_date: new Date().toJSON() 
@@ -19,7 +18,6 @@ function App() {
       for (const key in pairings){
         data.pairings.push({"player": key, "pairing": pairings[key]})
       }
-      console.log(data)
       const url = process.env.REACT_APP_BACKEND_URL + "api/create/";
       const response = await fetch(url, {
         method: "POST",

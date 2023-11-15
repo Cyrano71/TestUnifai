@@ -1,8 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders learn react link", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const placeholderElement = screen.getByPlaceholderText(
+    /You can add a user by adding/i
+  );
+  expect(placeholderElement).toBeInTheDocument();
+  const resultTable = screen.getByRole("result");
+  expect(resultTable.className).toContain("result none");
 });

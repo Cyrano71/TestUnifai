@@ -21,13 +21,13 @@ export default function ListItems() {
       >
         List previous SecretSantas
       </button>
-      {items && (
-        <div className={classes.result}>
-          {Object.keys(items).map((keyName, i) => {
+      <div className={classes.result}>
+        {items &&
+          Object.keys(items).map((keyName, i) => {
             return (
-              <div>
+              <div key={i}>
                 <h3 className={classes.header}>Secret Santa nb {i}</h3>
-                <ul>
+                <ul key={i}>
                   {items[keyName]["pairings"].map((pairing) => {
                     return (
                       <li key={pairing["player"]}>
@@ -39,8 +39,7 @@ export default function ListItems() {
               </div>
             );
           })}
-        </div>
-      )}
+      </div>
     </>
   );
 }

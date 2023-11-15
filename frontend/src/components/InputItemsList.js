@@ -36,7 +36,7 @@ export default function InputItemList(props) {
       var match = lines[t].match(
         /^((?:(?![!=]).)+)((?: [!=](?:(?! [!=]).)+)*)$/
       );
-
+      
       if (!match) {
         setError('Syntax error: "' + lines[t] + "\" isn't valid");
         return;
