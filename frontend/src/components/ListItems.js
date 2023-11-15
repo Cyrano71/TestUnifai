@@ -10,6 +10,7 @@ export default function ListItems() {
     );
     const content = await response.json();
     setItems(content);
+    console.log(content)
   };
 
   return (
@@ -21,9 +22,10 @@ export default function ListItems() {
       >
         List previous SecretSantas
       </button>
-      <div className={classes.result}>
-        {items &&
-          Object.keys(items).map((keyName, i) => {
+
+      {items && (
+        <div className={classes.result}>
+          {Object.keys(items).map((keyName, i) => {
             return (
               <div key={i}>
                 <h3 className={classes.header}>Secret Santa nb {i}</h3>
@@ -39,7 +41,8 @@ export default function ListItems() {
               </div>
             );
           })}
-      </div>
+        </div>
+      )}
     </>
   );
 }

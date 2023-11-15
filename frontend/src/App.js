@@ -27,7 +27,9 @@ function App() {
         body: JSON.stringify(data),
       });
     }
-    SendSecretSanta();
+    if (pairings){
+      SendSecretSanta();
+    }
   }, [pairings]);
   return (
     <div
