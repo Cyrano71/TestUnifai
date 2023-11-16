@@ -18,7 +18,6 @@ It will deploy a postgres database and a django rest api server.
 For the django we use the following packages :
 - psycopg2
 - django-cors-headers
-- djangorestframework-simplejwt
 
 The docker deployment will automatically populate the input data into the database (see [this sample](backend/api/fixtures/sample.json) )
 and will automatically create two users:
@@ -32,9 +31,6 @@ and will automatically create two users:
 4. install the dependencies
 
    `npm install`
-   
-We use as dependencies:
-- react-router
 
 4. Start the frontend app
 

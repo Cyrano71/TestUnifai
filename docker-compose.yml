@@ -24,7 +24,7 @@ services:
       - PROD_DB_NAME=main
       - PROD_DB_PORT=5432
       - PROD_DB_USER=postgres
-      - PROD_DB_PASSWORD=bureauxlocaux123
+      - PROD_DB_PASSWORD=unifai123
       - DJANGO_SETTINGS_MODULE=backend.settings
       - PYTHONUNBUFFERED=True
       - DJANGO_SUPERUSER_PASSWORD=1234
@@ -35,7 +35,7 @@ services:
     image: postgres:13.0
     environment:
       - POSTGRES_DB=main
-      - POSTGRES_PASSWORD=bureauxlocaux123
+      - POSTGRES_PASSWORD=unifai123
     ports:
       - 5432:5432
     healthcheck:
